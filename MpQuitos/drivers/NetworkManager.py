@@ -1,7 +1,7 @@
 import network
 import time
 import _thread
-import src.display.DisplayServiceSingleton as disp
+import drivers.display.DisplayServiceSingleton as disp
 import json
 
 
@@ -51,7 +51,7 @@ class WifiManager:
                 self._print_text(ip_addr, 3)
                 self._print_text("!              !", 4)
                 self._print_text("!!!!!!!!!!!!!!!!", 5)
-                time.sleep(15)
+                time.sleep(3)
 
 
             else:

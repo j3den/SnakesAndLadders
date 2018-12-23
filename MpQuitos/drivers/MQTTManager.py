@@ -1,9 +1,9 @@
 import time
-import src.display.DisplayServiceSingleton as disp
+import drivers.display.DisplayServiceSingleton as disp
 import json
 import umqtt.simple as mq
 import _thread
-import drivers.NetworkManager as nm
+
 
 
 class MQTTManager:
@@ -11,7 +11,7 @@ class MQTTManager:
     _print_text = disp.DisplaySingleService().print_text
     _clear_text = disp.DisplaySingleService().clear
     _statusCheckRunning = False
-    isConnected = False
+    _isConnected = False
     _isConnecting = False
 
     def __new__(self):
@@ -36,12 +36,13 @@ class MQTTManager:
 
     def connect(self):
         self._isConnecting = True
-        while not self.isConnected:
+        while not self._isConnected:
             try:
                 self._mq_connection.connect()
-                self.isConnected = True
+                self._isConnected = True
                 self._isConnecting = False
             except Exception as e:
+                self._isConnected = False
                 self._mq_connection.sock.close()
                 self._print_text("ERR", 3)
                 self._print_text(str(e), 4)
@@ -58,9 +59,9 @@ class MQTTManager:
                 self._print_text(message, 5)
 
             except Exception as ose:
-                self.isConnected = False
+                self._isConnected = False
                 print ("Adding " + message + " to retry")
-                if not self.isConnected and not self._isConnecting:
+                if not self._isConnected and not self._isConnecting:
                     _thread.start_new_thread(self.connect, ())
 
                 print(str(ose))

@@ -1,6 +1,6 @@
 import json
 
-import src.display.DisplayServiceSingleton as disp
+import drivers.display.DisplayServiceSingleton as disp
 import machine
 import utime
 
@@ -27,15 +27,14 @@ class RTCManager:
                 configInitTime = self.RTCSettings.get("initialValue", None)
                 if configInitTime is not None:
                     # YYYY,mm,dd,HH,mm,ss,us
-                    print (str(configInitTime))
-                    # TODO...Loop through [int] to form tuple?
+                    # TODO...Loop through list[int] to form tuple?
                     # TODO...Set self._rtc.datetime(tuple)
                     #timeTup = tuple()
                     #for t in configInitTime.split(","):
                        # timeTup.p
-                    #self._rtc.datetime(tupleA)
+                    self._rtc.datetime(tuple(configInitTime))
 
-            print("Init RTCManager " + str(self._instance))
+            print("Init RTCManager " + str(self._instance) + " with init Time = "+str(self._rtc.datetime()))
         return self._instance
 
     #Todo GETTER FOR DATETIME?
