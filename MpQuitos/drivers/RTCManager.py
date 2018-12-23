@@ -28,6 +28,8 @@ class RTCManager:
                 if configInitTime is not None:
                     # YYYY,mm,dd,HH,mm,ss,us
                     print (str(configInitTime))
+                    # TODO...Loop through [int] to form tuple?
+                    # TODO...Set self._rtc.datetime(tuple)
                     #timeTup = tuple()
                     #for t in configInitTime.split(","):
                        # timeTup.p
@@ -35,3 +37,5 @@ class RTCManager:
 
             print("Init RTCManager " + str(self._instance))
         return self._instance
+
+    #Todo GETTER FOR DATETIME?

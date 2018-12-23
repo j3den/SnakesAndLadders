@@ -63,6 +63,7 @@ class WifiManager:
                 time.sleep(5)
 
     # Connect To WLAN
+    # TODO...Could be done on separate thread...so other services can still run/not be blocked.
     def connectToWlan(self):
         self._print_text(" !* Wifi *! ", 0)
         self._print_text("Connect Wifi", 1)
