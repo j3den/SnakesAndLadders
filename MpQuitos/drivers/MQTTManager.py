@@ -3,6 +3,7 @@ import src.display.DisplayServiceSingleton as disp
 import json
 import umqtt.simple as mq
 import _thread
+import drivers.NetworkManager as nm
 
 
 class MQTTManager:
@@ -44,7 +45,6 @@ class MQTTManager:
                 self._mq_connection.sock.close()
                 self._print_text("ERR", 3)
                 self._print_text(str(e), 4)
-                print(str(e))
                 time.sleep(2)
 
     def sendMessage(self, message):

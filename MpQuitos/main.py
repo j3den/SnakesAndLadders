@@ -28,6 +28,7 @@ def messageTests():
     while True:
         mQTTManager.sendMessage("Hello! {}".format(str(x)))
         x = x + 1
+        time.sleep(10)
 
 
 _thread.start_new_thread(messageTests, ())
