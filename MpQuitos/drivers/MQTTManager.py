@@ -35,7 +35,10 @@ class MQTTManager:
 
     def connect(self):
         self._isConnecting = True
+        x = 0
+
         while not self._isConnected:
+
             try:
                 self._mq_connection.connect()
                 self._isConnected = True
@@ -44,17 +47,21 @@ class MQTTManager:
                 self._isConnected = False
                 self._mq_connection.sock.close()
                 self._print_text(str(e), 2)
+                self._print_text("MQTT Conn...",3)
+                self._print_text("Attempt:"+str(x),4)
+                x = x+1
                 time.sleep(2)
 
     def sendMessage(self, message):
         # Message is sent...if fail (exception) then it is added to re-try file.
+        print("Sending:", message)
         if self._isConnecting:
             print ("Currently attempting to Connect to Broker: Adding message to retry queue.\n")
             # TODO implement an internal file Queueing service
         else:
             try:
                 c = bytearray(message)
-                self._mq_connection.publish(retain=True, topic=self._default_topic, msg=c)
+                self._mq_connection.publish(retain=True, topic=self._default_topic, msg=message)
 
                 chunked_message = ([message[idx:idx + 16] for idx, val in enumerate(message) if idx % 16 == 0])
                 x = 0

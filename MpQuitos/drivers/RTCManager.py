@@ -28,11 +28,16 @@ class RTCManager:
                 if configInitTime is not None:
                     self._rtc.datetime(tuple(configInitTime))
 
+                self._rtc.init()
+
             print("Init RTCManager " + str(self._instance) + " with init Time = "+str(self._rtc.datetime()))
         return self._instance
 
     #Todo GETTER FOR DATETIME?
 
     # Todo GETTER FOR DATETIME IN SECONDS AFTER EPOCH?
+
+    def getTimeStamp(self):
+        return utime.mktime(self._rtc.datetime())
 
     #Todo Threaded function for time updates from external API?

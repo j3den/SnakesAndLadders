@@ -57,7 +57,8 @@ class MQTTClient:
 
     def connect(self, clean_session=True):
         self.sock = socket.socket()
-        print(str(socket.getaddrinfo(self.server,self.port)[0][-1]))
+        self.sock.settimeout(2.0)
+        #print(str(socket.getaddrinfo(self.server,self.port)[0][-1]))
         addr = socket.getaddrinfo(self.server, self.port)[0][-1]
         print(str(addr))
         self.sock.connect(addr)

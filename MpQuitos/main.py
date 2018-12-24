@@ -1,5 +1,4 @@
 import _thread
-import time
 
 import drivers.MQTTManager as mqm
 import drivers.NetworkManager as nm
@@ -17,6 +16,7 @@ def messageTests():
     while True:
         mQTTManager.sendMessage("Hello!Hello!Hello!Hello!Hello!Hello!Hello! {}".format(str(x)))
         x = x + 1
+        print(str(rtcman.RTCManager().getTimeStamp()))
 
 
 _thread.start_new_thread(messageTests, ())
