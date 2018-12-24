@@ -15,9 +15,8 @@ mQTTManager.connect()  # Connect to MQ broker (ActiveMQ in my case).
 def messageTests():
     x = 0
     while True:
-        mQTTManager.sendMessage("Hello! {}".format(str(x)))
+        mQTTManager.sendMessage("Hello!Hello!Hello!Hello!Hello!Hello!Hello! {}".format(str(x)))
         x = x + 1
-        time.sleep(1)
 
 
 _thread.start_new_thread(messageTests, ())

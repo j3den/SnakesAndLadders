@@ -5,7 +5,6 @@ import umqtt.simple as mq
 import _thread
 
 
-
 class MQTTManager:
     _instance = None
     _print_text = disp.DisplaySingleService().print_text
@@ -44,19 +43,25 @@ class MQTTManager:
             except Exception as e:
                 self._isConnected = False
                 self._mq_connection.sock.close()
-                self._print_text("ERR", 3)
-                self._print_text(str(e), 4)
+                self._print_text(str(e), 2)
                 time.sleep(2)
 
     def sendMessage(self, message):
         # Message is sent...if fail (exception) then it is added to re-try file.
         if self._isConnecting:
             print ("Currently attempting to Connect to Broker: Adding message to retry queue.\n")
+            # TODO implement an internal file Queueing service
         else:
             try:
                 c = bytearray(message)
                 self._mq_connection.publish(retain=True, topic=self._default_topic, msg=c)
-                self._print_text(message, 5)
+
+                chunked_message = ([message[idx:idx + 16] for idx, val in enumerate(message) if idx % 16 == 0])
+                x = 0
+                for i in chunked_message:
+                    if x < 4:
+                        self._print_text(chunked_message[x], 3 + x)
+                    x = x + 1
 
             except Exception as ose:
                 self._isConnected = False
@@ -67,6 +72,5 @@ class MQTTManager:
                 print(str(ose))
                 self._print_text("FAILED TO SEND!", 1)
                 self._print_text("ADDED TO RETRY!", 3)
-                self._print_text(message, 4)
-                self._print_text(str(ose), 5)
+                self._print_text(str(ose), 3)
                 print("OSError")

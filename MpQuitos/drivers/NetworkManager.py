@@ -37,32 +37,17 @@ class WifiManager:
             # Pre-load print_text method
 
             if self.wlan_intf.isconnected():
-
                 self._isConnected = True
                 self._isConnecting = False
                 ip_addr = self.wlan_intf.ifconfig()[0]
                 while len(ip_addr) < 15:
                     ip_addr = " " + ip_addr + " "
-
-                self._clear_text()
-                self._print_text("!!!!!!!!!!!!!!!!", 0)
-                self._print_text("!   CONNECTED  !", 1)
-                self._print_text("!              !", 2)
-                self._print_text(ip_addr, 3)
-                self._print_text("!              !", 4)
-                self._print_text("!!!!!!!!!!!!!!!!", 5)
+                self.displayConnected(ip_addr)
                 time.sleep(3)
 
-
             else:
+                self.displayLostConnection()
                 self._isConnected = False
-                self._clear_text()
-                self._print_text("!!!!!!!!!!!!!!!!", 0)
-                self._print_text("!    ERROR!    !", 1)
-                self._print_text("!              !", 2)
-                self._print_text("!     Lost     !", 3)
-                self._print_text("!  Connection  !", 4)
-                self._print_text("!!!!!!!!!!!!!!!!", 5)
                 self.connectToWlan()
                 time.sleep(5)
 
@@ -83,8 +68,8 @@ class WifiManager:
                 for i in range(0, x % 4):
                     elipses = elipses + "."
                     self._clear_text()
-                    self._print_text("Connecting" + elipses, 4)
-                    self._print_text("To " + self._SSID, 5)
+                    self._print_text("Connecting" + elipses, 1)
+                    self._print_text("To " + self._SSID, 2)
                 x = x + 1
                 time.sleep(0.5)
             self.isConnected = True
@@ -100,10 +85,30 @@ class WifiManager:
             self._print_text(self.wlan_intf.ifconfig()[0], 5)
 
             time.sleep(2.0)
-
+            self._clear_text()
             if not self._statusCheckRunning:
                 self._statusCheckRunning = True
                 _thread.start_new_thread(self.statusCheck, ())
 
         if not self._isConnected and not self._isConnecting:
             _thread.start_new_thread(connect, ())
+
+    def displayLostConnection(self):
+        self._clear_text()
+        self._print_text("!!!!!!!!!!!!!!!!", 0)
+        self._print_text("!    ERROR!    !", 1)
+        self._print_text("!              !", 2)
+        self._print_text("!     Lost     !", 3)
+        self._print_text("!  Connection  !", 4)
+        self._print_text("!!!!!!!!!!!!!!!!", 5)
+
+    def displayConnected(self, ip_addr):
+
+        self._print_text("!!!CONNECTED!!!", 0)
+        self._print_text(ip_addr, 1)
+        #####MESSAGE##########
+        #####MESSAGE##########
+        #####MESSAGE##########
+        #####MESSAGE##########
+
+
