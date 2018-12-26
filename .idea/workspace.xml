@@ -44,17 +44,17 @@
         <counts>
           <entry key="dummy" value="85" />
           <entry key="gitignore" value="21" />
-          <entry key="json" value="515" />
+          <entry key="json" value="520" />
           <entry key="md" value="481" />
-          <entry key="py" value="9955" />
+          <entry key="py" value="10136" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="515" />
+          <entry key="JSON" value="520" />
           <entry key="Markdown" value="481" />
           <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="9955" />
+          <entry key="Python" value="10136" />
         </counts>
       </usages-collector>
     </session>
@@ -63,14 +63,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.4260216">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="120">
+                  <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -87,20 +84,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="54" />
+                <state relative-caret-position="743">
+                  <caret line="94" column="21" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="94" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MpQuitos/src/MQService.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#40#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="15">
+                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -151,16 +148,16 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+                <state relative-caret-position="30">
+                  <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/NetworkManager.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-870">
@@ -214,10 +211,10 @@
         <option value="$PROJECT_DIR$/MpQuitos/drivers/NetworkManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/WebRequestsManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/config/ConfigurationManager.py" />
-        <option value="$PROJECT_DIR$/MpQuitos/config/config.json" />
-        <option value="$PROJECT_DIR$/MpQuitos/main.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py" />
         <option value="$PROJECT_DIR$/MpQuitos/src/MQService.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/main.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/config/config.json" />
       </list>
     </option>
   </component>
@@ -429,29 +426,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/umqtt/simple.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="636">
           <caret line="59" column="8" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="33" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -477,20 +457,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
+    <entry file="file://$PROJECT_DIR$/MpQuitos/src/MQService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="54" />
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/src/MQService.py">
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="743">
+          <caret line="94" column="21" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="94" selection-end-column="21" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
         </state>
       </provider>
     </entry>
