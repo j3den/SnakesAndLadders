@@ -1,8 +1,10 @@
-import network
-import time
 import _thread
+import time
+
 import drivers.display.DisplayServiceSingleton as disp
-import json
+import network
+
+import config.ConfigurationManager as cm
 
 
 class WifiManager:
@@ -14,13 +16,15 @@ class WifiManager:
     _isConnecting = False
     _SSID = ""
     _password = ""
+    _threadCounter = 0
+    _connectAttemptNum = 0
 
     def __new__(self):
         print(self._instance)
         if not self._instance:
             self._instance = super(WifiManager, self).__new__(self)
-            config = json.loads(open("config/config.json", "r").read())
-            self.wifiSettings = config["wifiSettings"]
+            self.wifiSettings = cm.ConfigurationManager().getWifiConfig()
+
             self._SSID = self.wifiSettings["ssid"]
             self._password = self.wifiSettings["password"]
             self.wlan_intf = network.WLAN(network.STA_IF)
@@ -33,9 +37,8 @@ class WifiManager:
 
     def statusCheck(self):
         print("Wifi Status Check Started")
-        while True:
-            # Pre-load print_text method
 
+        while True:
             if self.wlan_intf.isconnected():
                 self._isConnected = True
                 self._isConnecting = False
@@ -61,29 +64,34 @@ class WifiManager:
             self._print_text("Connect Wifi", 1)
             self._print_text("Starting Up..", 2)
 
-            self.wlan_intf.connect(self._SSID, self._password)
-            x = 1
-            while not self.wlan_intf.isconnected():
-                elipses = ""
-                for i in range(0, x % 4):
-                    elipses = elipses + "."
-                    self._clear_text()
-                    self._print_text("Connecting" + elipses, 1)
-                    self._print_text("To " + self._SSID, 2)
-                x = x + 1
-                time.sleep(0.5)
-            self.isConnected = True
-            self._isConnected = True
-            self._isConnecting = False
-            print("CONNECTED")
-            self._clear_text()
-            self._print_text(" !*Connected *!", 0)
-            self._print_text("To: ", 1)
-            self._print_text(self.wlan_intf.ifconfig()[2], 2)
-            self._print_text(" ", 3)
-            self._print_text("As IP:", 4)
-            self._print_text(self.wlan_intf.ifconfig()[0], 5)
-
+            try:
+                self.wlan_intf.connect(self._SSID, self._password)
+                x = 1
+                while not self.wlan_intf.isconnected():
+                    elipses = ""
+                    for i in range(0, x % 4):
+                        elipses = elipses + "."
+                        self._print_text("Connecting" + elipses, 1)
+                        self._print_text("To " + self._SSID, 2)
+                    x = x + 1
+                    time.sleep(0.5)
+                self.isConnected = True
+                self._isConnected = True
+                self._isConnecting = False
+                print("CONNECTED")
+                self._clear_text()
+                self._print_text(" !*Connected *!", 0)
+                self._print_text("To: ", 1)
+                self._print_text(self.wlan_intf.ifconfig()[2], 2)
+                self._print_text(" ", 3)
+                self._print_text("As IP:", 4)
+                self._print_text(self.wlan_intf.ifconfig()[0], 5)
+            except Exception as e:
+                print("Connect Exception:" + str(e) + " : Attempt "+str(self._connectAttemptNum))
+                self._connectAttemptNum = self._connectAttemptNum + 1
+                #Redfine may help :S?
+                self.wlan_intf = network.WLAN(network.STA_IF)
+                time.sleep(5.0)
             time.sleep(2.0)
             self._clear_text()
             if not self._statusCheckRunning:
@@ -91,6 +99,8 @@ class WifiManager:
                 _thread.start_new_thread(self.statusCheck, ())
 
         if not self._isConnected and not self._isConnecting:
+            print("New Connect Thread: "+str(self._threadCounter))
+            self._threadCounter = self._threadCounter + 1
             _thread.start_new_thread(connect, ())
 
     def displayLostConnection(self):
@@ -110,5 +120,3 @@ class WifiManager:
         #####MESSAGE##########
         #####MESSAGE##########
         #####MESSAGE##########
-
-

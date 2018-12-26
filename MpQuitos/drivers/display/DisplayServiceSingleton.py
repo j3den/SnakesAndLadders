@@ -1,4 +1,4 @@
-import src.display.ssd1306 as ssd1306
+import drivers.display.ssd1306 as ssd1306
 import machine
 import json
 
