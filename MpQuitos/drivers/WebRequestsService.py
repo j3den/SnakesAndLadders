@@ -12,13 +12,8 @@ class WebRequestsService:
         return self._instance
 
     def postRequest(self, destination, content, headers):
-        print("DES =" + destination + " Content = " + content)
         payload = content.encode('utf-8')
-        try:
-            req = urequests.post(destination, data=payload, headers=headers)
-            req.close()
-            return req
-        except Exception as e:
-            req.close()
-            print (str(e))
 
+        req = urequests.post(destination, data=payload, headers=headers)
+        req.close()
+        return req
