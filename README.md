@@ -10,11 +10,11 @@ PLACE IN /config/config.json
 ```json
 {
   "unitSettings": {
-    "Name": "Mozzy0"
+    "Name": "MozzyY"
   },
   "wifiSettings": {
-    "ssid": "NETGEAR1101-AV",
-    "password": "1h23hv1S!"
+    "ssid": "PLUSNET-AAAA",
+    "password": "s243dsds!2a"
   },
   "webServer": {
     "port": 80
@@ -28,11 +28,12 @@ PLACE IN /config/config.json
     "height": 64
   },
   "MQTTSettings": {
-    "server": "192.168.1.97",
+    "server": "11.222.33.11",
     "username": "admin",
-    "password": "admin",
-    "defaultTopic": "MosqitoSatus",
-    "clientId": "Mozzy0",
+    "password": "MyActiveMQPassword",
+    "authb64": "YWRtaW46RG9ua2V5U2FkZGxlMjE=",
+    "defaultTopic": "Mosquito",
+    "cacheFailedMessages":true,
     "port": 0
   },
   "RTCSettings":{
@@ -42,7 +43,9 @@ PLACE IN /config/config.json
     "updateServerURL":"http://worldclockapi.com/api/json/utc/now",
     "UTC_or_GMT":"UTC"
   }
+
 }
+
 
 ```
 

@@ -18,12 +18,6 @@ for (root,dirnames,filenames) in walk(sys.argv[1]):
 			print(root+"/"+g)
 			fileList.append(root+"/"+g)
 
-# #Remove files...
-# for fname in fileList:
-# 	command = "ampy --port "+ sys.argv[2] +" rm " + fname.replace(sys.argv[1]+"/","/")
-# 	print(command)
-# 	os.system(command)
-#
 #Add files...
 for fname in fileList:
 	command = "ampy --port "+ sys.argv[2] +" put " + fname + " " + fname.replace(sys.argv[1]+"/","")
@@ -40,8 +34,8 @@ remoteFiles = out.split("\n")
 
 print(remoteFiles)
 
-# #Start Putty
-# command = "putty -serial "+sys.argv[2]+" -sercfg 115200,R"
-# print("\n\nConnecting via Putty: \n\n"+command)
-# os.system(command)
-#
+#Start Putty
+command = "putty -serial "+sys.argv[2]+" -sercfg 115200"
+print("\n\nConnecting via Putty: \n\n"+command)
+os.system(command)
+

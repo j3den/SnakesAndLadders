@@ -33,18 +33,21 @@ class MQService:
         try:
             url = self._server + queueName + "?type=queue"
 
-            resp = self._webrequests_service.postRequest(destination=url, content="body=" + self.formMessageObject(message),
+            resp = self._webrequests_service.postRequest(destination=url,
+                                                         content="body=" + self.formMessageObject(message),
                                                          headers=self._authHeader)
 
             if resp.status_code is not 200:
                 print("Not got a 200...got : " + str(resp.status_code))
                 self._print_text("WMQERR:" + str(resp.status_code), 2)
+                return False  # Failed...
+
+            return True  # Success...
 
         except Exception as e:
-            self._print_text("WMQERR:"+str(e),2)
+            self._print_text("WMQEXP:" + str(e), 2)
             print ("MQ Exception ->" + str(e))
-
-
+            return False
 
     def formMessageObject(self, message):
         # Create a message object...
