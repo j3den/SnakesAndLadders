@@ -22,24 +22,36 @@ class MQService:
             self._auth = self._mq_settings.get("authb64")
             self._clientId = self.unitSettings["Name"]
             print("Init MQService " + str(self._instance))
-            self._authHeader = {"Authorization": "Basic " + self._auth,
-                                "Content-Type": "application/x-www-form-urlencoded"}
+            self._authHeader = {
+                "Authorization": "Basic " + self._auth,
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
 
             self._server = "http://" + self._mq_settings["server"] + ":8161/api/message/"
 
         return self._instance
 
     def addToQueue(self, queueName, message):
-        try:
-            url = self._server + queueName + "?type=queue"
 
+        url = self._server + queueName + "?type=queue"
+
+        messageFormed = self.formMessageObject(message)
+
+        headers = self._authHeader
+
+        content = "body=" + messageFormed
+
+        try:
             resp = self._webrequests_service.postRequest(destination=url,
-                                                         content="body=" + self.formMessageObject(message),
-                                                         headers=self._authHeader)
+                                                         content=content,
+                                                         headers=headers)
 
             if resp.status_code is not 200:
                 print("Not got a 200...got : " + str(resp.status_code))
                 self._print_text("WMQERR:" + str(resp.status_code), 2)
+                if (resp.reason is not None):
+                    print(resp.reason)
+                    self._print_text(str(resp.reason), 3)
                 return False  # Failed...
 
             return True  # Success...

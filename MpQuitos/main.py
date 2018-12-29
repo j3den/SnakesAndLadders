@@ -6,13 +6,12 @@ import network
 import config.ConfigurationManager as cfm
 import drivers.MQTTManager as mqm
 import drivers.NetworkManager as nm
-import drivers.RTCManager as rtcman
 import drivers.display.DisplayServiceSingleton as disp
 import src.MQService as mqs
+import machine
 
 configMan = cfm.ConfigurationManager()
 nameOfUnit = cfm.ConfigurationManager().getUnitConfig()["Name"]
-RTCManager = rtcman.RTCManager()  # Instantiate RTC Manager
 wifiManager = nm.WifiManager()  # Instantiate WifiManager
 mQTTManager = mqm.MQTTManager()  # Instantiate MQTT Manager
 wifiManager.connectToWlan()  # Connect To WLAN
@@ -34,28 +33,27 @@ for nw in networks:
     if nw[0].decode("utf-8") == configMan.getWifiConfig()["ssid"]:
         print(" I KNOW THIS ONE!")
         known_network_found = True
-time.sleep(3)
 
-if not known_network_found:
-    _print_text("Entering APMode",3)
-    wifiInterface = network.WLAN(network.AP_IF)
-    wifiInterface.active(True)
-    wifiInterface.config(essid="MOSQUITOX", authmode=3, password='1234567819')
-    while wifiInterface.active() is not True:
-        print("..." + str(wifiInterface.active()))
-        time.sleep(1)
 
+# if not known_network_found:
+#     _print_text("Entering APMode", 3)
+#     wifiInterface = network.WLAN(network.AP_IF)
+#     wifiInterface.active(True)
+#     wifiInterface.config(essid="MOSQUITOX", authmode=3, password='1234567819')
+#     while wifiInterface.active() is not True:
+#         print("..." + str(wifiInterface.active()))
+#         time.sleep(1)
 
 
 def messageTests():
     x = 0
-
     while True:
         m = "Hello! {}".format(str(x))
-        if webMQService.addToQueue(nameOfUnit,m ):
-           _print_text("WMQ ->",4)
-           _print_text(m,5)
+        if webMQService.addToQueue(nameOfUnit, m):
+            _print_text("WMQ ->", 4)
+            _print_text(m, 5)
         x = x + 1
+        machine.deepsleep(5*60*1000)
 
 
 try:

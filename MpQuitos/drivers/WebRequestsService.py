@@ -13,7 +13,6 @@ class WebRequestsService:
 
     def postRequest(self, destination, content, headers):
         payload = content.encode('utf-8')
-
         req = urequests.post(destination, data=payload, headers=headers)
         req.close()
         return req
