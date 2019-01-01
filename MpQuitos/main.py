@@ -6,6 +6,7 @@ import drivers.NetworkManager as nm
 import drivers.display.DisplayServiceSingleton as disp
 import src.MQService as mqs
 import src.SensorService as sensorService
+import dht
 
 configMan = cfm.ConfigurationManager()
 nameOfUnit = cfm.ConfigurationManager().getUnitConfig()["Name"]
@@ -23,19 +24,25 @@ for f in i2c.scan():
 
 
 def messageTests():
-    stored_x = machine.RTC().memory()
-    if len(stored_x)>0:
-        x = int(str(stored_x))
-        print(stored_x + " is type "+str(type(stored_x)))
-    else:
-        x = 0
+
     while True:
-        m = "Hello! {}".format(str(x))
+        led = machine.Pin(14, machine.Pin.OUT)
+        d = dht.DHT11(machine.Pin(17))
+
+        d.measure()
+        temp = d.temperature()
+        humidity = d.humidity()
+        m = "{\"temperature\":\"" + str(temp) + "\",\"humidity\":\"" + str(humidity) + "\"}"
         if webMQService.addToQueue(nameOfUnit, m):
+            led.value(1)
             _print_text("WMQ ->", 4)
             _print_text(m, 5)
-        machine.RTC.memory(str(x+1).encode('utf-8'))
-        machine.deepsleep(10 * 1000)
+            time.sleep(1)
+            led.value(0)
+            _clear_text()
+            time.sleep(1)
+
+        machine.deepsleep(15*60 * 1000)
 
 
 # Scan for known networks and connect if found:
@@ -59,5 +66,5 @@ if wifiManager.scanForKnownNetworks():
             x = x + 1
 else:
     wifiManager.enterAPMode()
+    machine.deepsleep(15 * 60 * 1000)
 
-_thread.start_new_thread(messageTests, ())
