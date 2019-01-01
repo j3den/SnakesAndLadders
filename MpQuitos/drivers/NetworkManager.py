@@ -23,8 +23,8 @@ class WifiManager:
         print(self._instance)
         if not self._instance:
             self._instance = super(WifiManager, self).__new__(self)
-            self.wifiSettings = cm.ConfigurationManager().getWifiConfig()
 
+            self.wifiSettings = cm.ConfigurationManager().getWifiConfig()
             self._SSID = self.wifiSettings["ssid"]
             self._password = self.wifiSettings["password"]
             self.wlan_intf = network.WLAN(network.STA_IF)
@@ -32,8 +32,40 @@ class WifiManager:
             self._isConnected = False
             self._isConnecting = False
 
+
             print("init NetworkManager " + str(self._instance))
         return self._instance
+
+
+    def scanForKnownNetworks(self):
+        # Enable AP Wifi and scan for a known network
+        wifiInterface = network.WLAN(network.STA_IF)
+        wifiInterface.active(True)
+
+        networks = wifiInterface.scan()
+
+        for nw in networks:
+            print (self.wifiSettings["ssid"])
+            print("Found " + str(nw[0]))
+            if nw[0].decode("utf-8") == self.wifiSettings["ssid"]:
+                print(" I KNOW THIS ONE!")
+                return True
+        return False
+
+    def enterAPMode(self):
+
+        if not known_network_found:
+            self._clear_text()
+            self._print_text("No APs Found...",0)
+            self._print_text("Entering APMode", 2)
+            self._print_text("Use Mobile App.",4)
+            self._print_text("to Set Up.", 5)
+            wifiInterface = network.WLAN(network.AP_IF)
+            wifiInterface.active(True)
+            wifiInterface.config(essid="MOSQUITOX", authmode=3, password='1234567819')
+            while wifiInterface.active() is not True:
+                print("..." + str(wifiInterface.active()))
+                time.sleep(1)
 
     def statusCheck(self):
         print("Wifi Status Check Started")
@@ -59,6 +91,10 @@ class WifiManager:
     def connectToWlan(self):
 
         def connect():
+
+
+
+
             self._isConnecting = True
             self._print_text(" !* Wifi *! ", 0)
             self._print_text("Connect Wifi", 1)
