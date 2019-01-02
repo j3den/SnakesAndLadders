@@ -5,7 +5,7 @@ import MpQuitos.config
 
 class DHTSensors:
 
-    def getValues(self):
+    def getValues(self,dhtSensorSettings):
         #Load config
         d = dht.DHT11(machine.Pin(pin))
         d.measure()
