@@ -1,10 +1,18 @@
 import dht
 import machine
+import time
+import MpQuitos.config
 
-class DHT22Sensor:
+class DHTSensors:
 
-    def getValues(self,pin):
+    def getValues(self):
+        #Load config
         d = dht.DHT11(machine.Pin(pin))
-        result = d.measure()
-        print (result)
-        return result
+        d.measure()
+        time.sleep(0.1)
+        vals = (d.temperature(),d.humidity())
+
+        print (vals)
+        return vals
+
+
