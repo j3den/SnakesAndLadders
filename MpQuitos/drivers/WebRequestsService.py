@@ -21,11 +21,8 @@ class WebRequestsService:
         #Form url:
         rootURI = destination+"?"
 
-        if headers.contains("Authorzation"):
-            #TODO...
-
         for param in url_params:
-            rootURI = rootURI+param+"="+url_params[param]
+            rootURI = rootURI+param+"="+url_params[param]+"&"
 
         uri = rootURI
         greq = urequests.get(rootURI,headers = headers)

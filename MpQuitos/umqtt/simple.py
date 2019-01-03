@@ -55,9 +55,10 @@ class MQTTClient:
         self.lw_qos = qos
         self.lw_retain = retain
 
-    def connect(self, clean_session=True):
+    #Todo -> Added Timeout param for MQTT socket ACK
+    def connect(self, clean_session=True,timeout = 2.0):
         self.sock = socket.socket()
-        self.sock.settimeout(2.0)
+        self.sock.settimeout(timeout)
         #print(str(socket.getaddrinfo(self.server,self.port)[0][-1]))
         addr = socket.getaddrinfo(self.server, self.port)[0][-1]
         print(str(addr))
