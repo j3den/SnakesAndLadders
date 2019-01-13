@@ -8,6 +8,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="-398225957">
       <usages-collector id="statistics.file.extensions.edit">
@@ -50,9 +51,12 @@
       </usages-collector>
     </session>
   </component>
+=======
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6784859">
+    <splitter split-orientation="horizontal" split-proportion="0.60350424">
       <split-first>
+<<<<<<< HEAD
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -186,14 +190,144 @@
             </leaf>
           </split-second>
         </splitter>
+=======
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="322">
+                  <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/src/SensorService.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="472">
+                  <caret line="27" selection-start-line="27" selection-end-line="27" />
+                  <folding>
+                    <element signature="e#0#54#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/RTCManager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-69">
+                  <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="598">
+                  <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="600">
+                  <caret line="99" column="52" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/src/MQService.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="23">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/umqtt/simple.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="69">
+                  <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#0#23#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/boot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="184">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/display/DisplayServiceSingleton.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+=======
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/display/DisplayServiceSingleton.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="575">
+                  <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/sensors/DHT.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="322">
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/sensors/DS1820B.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
             <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="705">
-                  <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+                <state relative-caret-position="529">
+                  <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -236,31 +370,40 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/MpQuitos/src/NetworkManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/src/display/DisplayServiceSingleton.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/MpQuitos/umqtt/simple.py" />
+=======
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
         <option value="$PROJECT_DIR$/MpQuitos/drivers/RTCManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/display/DisplayServiceSingleton.py" />
-        <option value="$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/WebRequestsManager.py" />
         <option value="$PROJECT_DIR$/installer.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/MpQuitos/src/MQService.py" />
-        <option value="$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py" />
         <option value="$PROJECT_DIR$/MpQuitos/boot.py" />
         <option value="$PROJECT_DIR$/MpQuitos/config/ConfigurationManager.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/NetworkManager.py" />
-        <option value="$PROJECT_DIR$/MpQuitos/src/SensorService.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/main.py" />
         <option value="$PROJECT_DIR$/MpQuitos/drivers/sensors/DHT22.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/MpQuitos/drivers/sensors/DHT.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/drivers/sensors/DS1820B.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/src/SensorService.py" />
+        <option value="$PROJECT_DIR$/MpQuitos/umqtt/simple.py" />
         <option value="$PROJECT_DIR$/MpQuitos/config/config.json" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/MpQuitos/main.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py" />
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1237" />
-    <option name="height" value="1059" />
+    <option name="width" value="960" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -268,53 +411,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
               <item name="drivers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
-              <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
-              <item name="drivers" type="462c0819:PsiDirectoryNode" />
-              <item name="display" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
               <item name="drivers" type="462c0819:PsiDirectoryNode" />
               <item name="sensors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mpmqtt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mpmqtt" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakesAndLadders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SnakesAndLadders" type="462c0819:PsiDirectoryNode" />
               <item name="MpQuitos" type="462c0819:PsiDirectoryNode" />
               <item name="umqtt" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -322,7 +459,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,19 +467,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/MpQuitos/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/MpQuitos/drivers" />
-      <recent name="$PROJECT_DIR$/MpQuitos/config" />
-      <recent name="$PROJECT_DIR$/MpQuitos/src/display" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MpQuitos/drivers" />
       <recent name="$PROJECT_DIR$/MpQuitos/Drivers" />
       <recent name="$PROJECT_DIR$/MpQuitos/config" />
       <recent name="$PROJECT_DIR$/MpQuitos" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MpQuitos/drivers/sensors" />
+      <recent name="$PROJECT_DIR$/MpQuitos/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/MpQuitos/drivers" />
+      <recent name="$PROJECT_DIR$/MpQuitos/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,11 +505,13 @@
       <option name="presentableId" value="Default" />
       <updated>1545478272139</updated>
       <workItem from="1545897775639" duration="1377000" />
+      <workItem from="1546415981810" duration="1954000" />
+      <workItem from="1546503309940" duration="830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1377000" />
+    <option name="totallyTimeSpent" value="4129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,10 +523,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="2493" height="1415" extended-state="6" />
+    <frame x="-1" y="-1" width="1922" height="1061" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11376518" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17944622" />
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -399,7 +541,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32944834" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21989122" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.11595745" />
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -413,9 +559,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -433,13 +576,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/src/umqtt/simple.py" />
     <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/base64.py" />
-    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -450,23 +586,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1057">
-          <caret line="94" column="21" selection-start-line="89" selection-start-column="7" selection-end-line="94" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/display/ssd1306.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/src/SensorService.py">
+    <entry file="file://$PROJECT_DIR$/installer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="180">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
@@ -478,25 +608,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/display/DisplayServiceSingleton.py">
+=======
+    <entry file="file://$PROJECT_DIR$/MpQuitos/config/ConfigurationManager.py" />
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/NetworkManager.py">
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="-120">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/sensors/DHT22.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/NetworkManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -508,59 +640,75 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/RTCManager.py">
+=======
+    <entry file="file://$PROJECT_DIR$/MpQuitos/main.py">
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/src/MQService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MpQuitos/umqtt/simple.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MpQuitos/boot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="184">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/installer.py">
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/display/DisplayServiceSingleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="207">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/sensors/DHT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/WebRequestsService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MpQuitos/config/ConfigurationManager.py">
+=======
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/RTCManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="-69">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/sensors/DS1820B.py">
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -572,6 +720,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+=======
+    <entry file="file://$PROJECT_DIR$/MpQuitos/src/SensorService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/umqtt/simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/config/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MpQuitos/drivers/MQTTManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="99" column="52" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+>>>>>>> 380056bb34247d88b5aa1baae6621af6aaf29f52
         </state>
       </provider>
     </entry>

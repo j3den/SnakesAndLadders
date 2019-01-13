@@ -30,6 +30,7 @@ class MQTTManager:
             self._default_topic = self.mqttSettings["defaultTopic"]
             self._clientId = self.unitSettings["Name"]
             self._port = self.mqttSettings["port"]
+            self._socket_timeout = self.mqttSettings["timeout"]
 
             self._mq_connection = mq.MQTTClient(client_id=self._clientId, server=self._server, port=self._port,
                                                 user=self._username,
@@ -45,7 +46,7 @@ class MQTTManager:
         while not self._isConnected:
 
             try:
-                self._mq_connection.connect()
+                self._mq_connection.connect(timeout = self._socket_timeout)
                 self._isConnected = True
                 self._isConnecting = False
                 self._clear_text()

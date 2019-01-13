@@ -16,3 +16,13 @@ class WebRequestsService:
         req = urequests.post(destination, data=payload, headers=headers)
         req.close()
         return req
+
+    def getRequest(self,destination,headers,url_params):
+        #Form url:
+        rootURI = destination+"?"
+
+        for param in url_params:
+            rootURI = rootURI+param+"="+url_params[param]+"&"
+
+        uri = rootURI
+        greq = urequests.get(rootURI,headers = headers)

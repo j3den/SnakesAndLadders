@@ -1,7 +1,7 @@
 import drivers.display.DisplayServiceSingleton as disp
 import config.ConfigurationManager as cfm
-import drivers.sensors.DHT22 as dht22
-
+import MpQuitos.drivers.sensors.DHT as dht
+import json
 
 class SensorService:
     _instance = None
@@ -15,9 +15,16 @@ class SensorService:
             self._instance = super(SensorService, self).__new__(self)
 
             print("Init SensorService " + str(self._instance))
-
         return self._instance
 
-    def getDHT22Values(self):
-        a = dht22.DHT22Sensor().getValues(22)
-        print (a)
+    def collectSensorData(self):
+        print("Collecting Data...")
+        data_dict = []
+        for sensor in _sensorSettings["sensors"]:
+            s_type = sensor["type"]
+            if s_type is "DHT11" or "DHT22":
+                res = dht.DHTSensors().getValues(sensor)
+                data_dict[s[name]] = res
+
+
+
