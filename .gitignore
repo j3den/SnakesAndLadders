@@ -1,2 +1,6 @@
 #Ignore Config File.
 /MpQuitos/config/config.json
+
+#Ignore IntelliJ stuff
+
+/.idea
